@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Campañas de Marketing</title>
+</head>
+<body>
+  <h1>Gestión de Campañas de Marketing - Consola</h1>
+  <p>Los resultados en consola.</p>
+
+  <script>
+    // Creación de arreglos: Lista de especialistas disponibles
+    let especialistas = [
+      { nombre: "Sofía Ramírez", rol: "Estratega" },
+      { nombre: "Diego Vargas", rol: "Redactor" },
+      { nombre: "Clara Morales", rol: "Diseñadora Gráfica" }
+    ];
+
+    // TODO 1: Usar push
+    especialistas.push({ nombre: "Lucía Fernández", rol: "Analista de Datos" });
+    console.log("Especialistas tras push:", especialistas);
+
+    // TODO 2: Usar pop
+    let eliminadoPop = especialistas.pop();
+    console.log("Especialista eliminado (pop):", eliminadoPop);
+    console.log("Especialistas tras pop:", especialistas);
+
+    // TODO 3: Usar unshift
+    especialistas.unshift({ nombre: "Mateo González", rol: "Community Manager" });
+    console.log("Especialistas tras unshift:", especialistas);
+
+    // TODO 4: Usar shift
+    let eliminadoShift = especialistas.shift();
+    console.log("Especialista eliminado (shift):", eliminadoShift);
+    console.log("Especialistas tras shift:", especialistas);
+
+    // TODO 5: Usar slice
+    let primerosDos = especialistas.slice(0, 2);
+    console.log("Sublista con los primeros dos especialistas (slice):", primerosDos);
+
+    // Arreglo multidimensional: campañas con especialistas asignados
+    let campanas = [
+      [
+        { nombre: "Sofía Ramírez", rol: "Estratega" },
+        { nombre: "Diego Vargas", rol: "Redactor" }
+      ],
+      [
+        { nombre: "Clara Morales", rol: "Diseñadora Gráfica" },
+        { nombre: "Lucía Fernández", rol: "Analista de Datos" }
+      ]
+    ];
+
+    // TODO 6: forEach para mostrar campañas
+    console.log("Reporte de campañas:");
+    campanas.forEach((equipo, index) => {
+      console.log("Campaña " + (index + 1) + ":");
+      equipo.forEach(especialista => {
+        console.log("- " + especialista.nombre + " (" + especialista.rol + ")");
+      });
+    });
+
+    // TODO 7: for...of para contar especialistas
+    let num = 1;
+    for (let equipo of campanas) {
+      console.log("Campaña " + num + " tiene " + equipo.length + " especialistas");
+      num++;
+    }
+
+    // TODO 8: map para convertir nombres a mayúsculas
+    let especialistasMayus = especialistas.map(esp => ({
+      nombre: esp.nombre.toUpperCase(),
+      rol: esp.rol
+    }));
+    console.log("Especialistas en mayúsculas:", especialistasMayus);
+
+    // TODO 9: Función de reporte completo
+    function generarReporteCompleto(campanas) {
+      console.log("Reporte Completo:");
+      for (let i = 0; i < campanas.length; i++) {
+        console.log("Campaña " + (i + 1) + " (" + campanas[i].length + " especialistas):");
+        campanas[i].forEach((esp, idx) => {
+          console.log("  " + (idx + 1) + ". " + esp.nombre + " - " + esp.rol);
+        });
+      }
+    }
+
+    generarReporteCompleto(campanas);
+  </script>
+</body>
+</html>

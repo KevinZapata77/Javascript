@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8 - Convertir Segundos</title>
+</head>
+<body>
+  <h1>Ejercicio 8 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let segundos = parseInt(prompt("Ingresa una cantidad de segundos:"));
+
+    if (isNaN(segundos) || segundos < 0) {
+      console.log("No ingresaste una cantidad válida de segundos.");
+    } else {
+      let minutos = Math.floor(segundos / 60);
+      let horas = Math.floor(segundos / 3600);
+
+      console.log(`${segundos} segundos equivalen a:`);
+      console.log(`${minutos} minuto(s).`);
+      console.log(`${horas} hora(s).`);
+    }
+  </script>
+</body>
+</html>

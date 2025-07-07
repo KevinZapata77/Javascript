@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Par o Impar</title>
+</head>
+<body>
+  <h1>Ejercicio 3 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let numero = parseInt(prompt("Ingresa un número:"));
+
+    if (isNaN(numero)) {
+      console.log("No ingresaste un número válido.");
+    } else if (numero % 2 === 0) {
+      console.log(`El número ${numero} es par.`);
+    } else {
+      console.log(`El número ${numero} es impar.`);
+    }
+  </script>
+</body>
+</html>

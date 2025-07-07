@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 10 - Contar Letras</title>
+</head>
+<body>
+  <h1>Ejercicio 10 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let frase = prompt("Ingresa una frase:");
+
+    if (!frase) {
+      console.log("No escribiste ninguna frase.");
+    } else {
+      let sinEspacios = frase.replace(/\s/g, '');
+      let cantidadLetras = sinEspacios.length;
+
+      console.log(`La frase tiene ${cantidadLetras} letra(s) (sin contar espacios).`);
+    }
+  </script>
+</body>
+</html>

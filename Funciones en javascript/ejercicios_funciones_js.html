@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>20 Ejercicios de Funciones en JavaScript</title>
+</head>
+<body>
+  <h1>20 Ejercicios de Funciones en JavaScript</h1>
+  <p>Los resultados en la consola</p>
+
+  <script>
+    // 1. Saludo simple
+    function saludar(nombre) {
+      return `¡Hola, ${nombre}!`;
+    }
+    console.log(saludar("Ana"));
+
+    // 2. Suma de dos números
+    const sumar = function(a, b) {
+      return a + b;
+    }
+    console.log(sumar(3, 5));
+
+    // 3. Arrow function para duplicar
+    const duplicar = x => x * 2;
+    console.log(duplicar(4));
+
+    // 4. Par o impar
+    function esPar(n) {
+      return n % 2 === 0;
+    }
+    console.log(esPar(6), esPar(7));
+
+    // 5. Valor por defecto
+    function saludarCon(nombre, saludo = "Hola") {
+      return `${saludo}, ${nombre}`;
+    }
+    console.log(saludarCon("Juan"));
+    console.log(saludarCon("Ana", "Buenos días"));
+
+    // 6. Función sin parámetros
+    const mensaje = () => "¡JavaScript es genial!";
+    console.log(mensaje());
+
+    // 7. IIFE simple
+    (function() {
+      console.log("¡Soy una IIFE!");
+    })();
+
+    // 8. Suma de un array
+    const sumarArray = function(arr) {
+      return arr.reduce((acc, val) => acc + val, 0);
+    }
+    console.log(sumarArray([1, 2, 3]));
+
+    // 9. Rest parameters
+    function multiplicar(...nums) {
+      return nums.reduce((acc, val) => acc * val, 1);
+    }
+    console.log(multiplicar(2, 3, 4));
+
+    // 10. Cierre (closure)
+    function crearContador() {
+      let contador = 0;
+      return function() {
+        contador++;
+        return contador;
+      };
+    }
+    const contador = crearContador();
+    console.log(contador());
+    console.log(contador());
+
+    // 11. Método en objeto
+    const calculadora = {
+      sumar: function(a, b) {
+        return a + b;
+      },
+      restar: (a, b) => a - b
+    }
+    console.log(calculadora.sumar(5, 3));
+    console.log(calculadora.restar(5, 3));
+
+    // 12. Factorial recursivo
+    const factorial = function f(n) {
+      return n <= 1 ? 1 : n * f(n - 1);
+    }
+    console.log(factorial(5));
+
+    // 13. Filtrar mayores
+    const filtrarMayores = arr => arr.filter(n => n > 10);
+    console.log(filtrarMayores([5, 12, 8, 15]));
+
+    // 14. Parámetros por defecto avanzado
+    function calcularArea(base = 1, altura = 1) {
+      return base * altura;
+    }
+    console.log(calcularArea(5));
+    console.log(calcularArea(5, 3));
+
+    // 15. Callback
+    function procesar(arr, callback) {
+      return arr.map(callback);
+    }
+    console.log(procesar([1, 2, 3], num => num * 2));
+
+    // 16. Ámbito y cierre
+    function crearSaludo(saludoBase) {
+      return function(nombre) {
+        return `${saludoBase}, ${nombre}`;
+      };
+    }
+    const saludarConHola = crearSaludo("Hola");
+    console.log(saludarConHola("Ana"));
+
+    // 17. IIFE con parámetros
+    const sumaInmediata = (function(a, b) {
+      return a + b;
+    })(3, 5);
+    console.log("Suma inmediata:", sumaInmediata);
+
+    // 18. Función como método dinámico
+    const persona = {
+      nombre: "Ana",
+      presentarse: () => `Mi nombre es ${persona.nombre}`
+    }
+    console.log(persona.presentarse());
+
+    // 19. Rest parameters y reduce
+    function promedio(...nums) {
+      const total = nums.reduce((acc, val) => acc + val, 0);
+      return total / nums.length;
+    }
+    console.log(promedio(10, 20, 30));
+
+    // 20. Combinación de funciones
+    function componer(f1, f2) {
+      return function(x) {
+        return f2(f1(x));
+      };
+    }
+    const combinada = componer(duplicar, x => x + 10);
+    console.log(combinada(5));
+  </script>
+</body>
+</html>

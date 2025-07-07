@@ -1,0 +1,20 @@
+<h3>Variación 2</h3>
+<script>
+let tiempoTotal = 240;
+let tiempoRestante = 240;
+let ciclo = 0;
+
+for (let i = 0; i < tiempoTotal; i += 50) {
+  ciclo++;
+  if (ciclo % 2 !== 0) {
+    tiempoRestante -= 50;
+    console.log(`Ciclo ${ciclo}: Trabajar 50 minutos, Tiempo restante: ${tiempoRestante} minutos`);
+  } else {
+    let numPausa = Math.ceil(ciclo / 2);
+    let duracionPausa = numPausa <= 3 ? 10 : 20;
+    tiempoRestante -= duracionPausa;
+    console.log(`Ciclo ${ciclo}: Pausa de ${duracionPausa} minutos, Tiempo restante: ${tiempoRestante} minutos`);
+  }
+  if (tiempoRestante <= 0) break;
+}
+</script>

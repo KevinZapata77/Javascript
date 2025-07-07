@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9 - Celsius a Fahrenheit</title>
+</head>
+<body>
+  <h1>Ejercicio 9 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let celsius = parseFloat(prompt("Ingresa la temperatura en grados Celsius:"));
+
+    if (isNaN(celsius)) {
+      console.log("No ingresaste una temperatura válida.");
+    } else {
+      let fahrenheit = (celsius * 9/5) + 32;
+      console.log(`${celsius}°C equivalen a ${fahrenheit.toFixed(2)}°F.`);
+    }
+  </script>
+</body>
+</html>

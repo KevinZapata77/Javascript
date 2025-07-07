@@ -1,0 +1,18 @@
+<h3>Variación 3</h3>
+<script>
+let inversion = 100;
+let dia = 1;
+
+do {
+  let adicional = (dia % 3 === 0) ? 10 : 5;
+  let ganancia = 10 + adicional;
+  inversion += ganancia;
+  console.log(`Día ${dia}: Ganancia de $${ganancia}, Total: $${inversion}`);
+  if (inversion > 200) {
+    console.log("Inversión superó $200, deteniendo el proceso");
+    break;
+  }
+  dia++;
+} while (dia <= 14);
+console.log(`Total final de inversión: $${inversion}`);
+</script>

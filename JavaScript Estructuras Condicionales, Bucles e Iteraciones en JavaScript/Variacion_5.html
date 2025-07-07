@@ -1,0 +1,16 @@
+<h3>Variación 5</h3>
+<script>
+let costoTotal = 0;
+
+for (let dia = 1; dia <= 5; dia++) {
+  let consumo = Math.floor(Math.random() * 10) + 1;
+  let costoDia = consumo > 5 ? 3 : 1.5;
+  costoTotal += costoDia;
+  console.log(`Día ${dia}: Consumo ${consumo} kWh, Costo: $${costoDia}, Total: $${costoTotal.toFixed(2)}`);
+  if (costoTotal > 12) {
+    console.log("Costo total superó $12, deteniendo el monitoreo");
+    break;
+  }
+}
+console.log(`Costo total final: $${costoTotal.toFixed(2)}`);
+</script>

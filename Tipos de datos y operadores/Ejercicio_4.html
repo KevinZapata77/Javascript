@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 - Doble y Mitad</title>
+</head>
+<body>
+  <h1>Ejercicio 4 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let numero = parseFloat(prompt("Ingresa un número:"));
+
+    if (isNaN(numero)) {
+      console.log("No ingresaste un número válido.");
+    } else {
+      let doble = numero * 2;
+      let mitad = numero / 2;
+
+      console.log(`El doble de ${numero} es ${doble}.`);
+      console.log(`La mitad de ${numero} es ${mitad}.`);
+    }
+  </script>
+</body>
+</html>

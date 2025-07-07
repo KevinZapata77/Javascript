@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Comparar Números</title>
+</head>
+<body>
+  <h1>Ejercicio 2 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let num1 = parseFloat(prompt("Ingresa el primer número:"));
+    let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+
+    if (num1 > num2) {
+      console.log(`El número mayor es: ${num1}`);
+    } else if (num2 > num1) {
+      console.log(`El número mayor es: ${num2}`);
+    } else {
+      console.log("Ambos números son iguales.");
+    }
+  </script>
+</body>
+</html>

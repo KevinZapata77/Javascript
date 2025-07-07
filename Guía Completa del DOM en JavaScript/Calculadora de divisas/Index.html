@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad: Conversor de Divisas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter">
+        <h2>Conversor de Divisas</h2>
+        <div class="input-group">
+            <input type="number" id="amount" placeholder="Cantidad" min="0">
+            <select id="fromCurrency">
+                <option value="COP">Pesos Colombianos (COP)</option>
+                <option value="USD">Dólares (USD)</option>
+                <option value="EUR">Euros (EUR)</option>
+            </select>
+            <span>a</span>
+            <select id="toCurrency">
+                <option value="COP">Pesos Colombianos (COP)</option>
+                <option value="USD">Dólares (USD)</option>
+                <option value="EUR">Euros (EUR)</option>
+            </select>
+        </div>
+        <button onclick="convert()">Convertir</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 6 - Calcular Edad</title>
+</head>
+<body>
+  <h1>Ejercicio 6 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    const añoActual = 2025;
+    let añoNacimiento = parseInt(prompt("¿En qué año naciste?"));
+
+    if (isNaN(añoNacimiento)) {
+      console.log("No ingresaste un año válido.");
+    } else {
+      let edad = añoActual - añoNacimiento;
+      
+      if (edad >= 0 && edad <= 120) {
+        console.log(`Tienes aproximadamente ${edad} años.`);
+      } else {
+        console.log("El año ingresado no es válido para calcular la edad.");
+      }
+    }
+  </script>
+</body>
+</html>

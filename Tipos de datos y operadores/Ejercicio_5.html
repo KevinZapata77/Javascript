@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5 - Operaciones Básicas</title>
+</head>
+<body>
+  <h1>Ejercicio 5 - JavaScript</h1>
+  <p>En la consola se reflejará el resultado.</p>
+
+  <script>
+    let num1 = parseFloat(prompt("Ingresa el primer número:"));
+    let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+
+    if (isNaN(num1) || isNaN(num2)) {
+      console.log("Uno o ambos valores no son números válidos.");
+    } else {
+      console.log(`Suma: ${num1 + num2}`);
+      console.log(`Resta: ${num1 - num2}`);
+      console.log(`Multiplicación: ${num1 * num2}`);
+      
+      if (num2 !== 0) {
+        console.log(`División: ${num1 / num2}`);
+      } else {
+        console.log("No se puede dividir por cero.");
+      }
+    }
+  </script>
+</body>
+</html>

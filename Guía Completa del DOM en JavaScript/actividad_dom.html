@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad DOM</title>
+  <style>
+    .tarea {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .item-lista {
+      margin: 5px 0;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Actividad Práctica: Manipulación del DOM</h1>
+
+  <div id="contenedor-tareas">
+    <!-- Tarea 1: Modificar texto -->
+    <div class="tarea" id="tarea1">
+      <h2>Tarea 1: Modificar Texto</h2>
+      <p id="texto-inicial">Este es un texto inicial</p>
+      <button onclick="modificarTexto()">Cambiar Texto</button>
+    </div>
+
+    <!-- Tarea 2: Cambiar estilos -->
+    <div class="tarea" id="tarea2">
+      <h2>Tarea 2: Cambiar Estilos</h2>
+      <div id="caja-estilo">Caja con estilo inicial</div>
+      <button onclick="cambiarEstilo()">Cambiar Estilo</button>
+    </div>
+
+    <!-- Tarea 3: Añadir elementos -->
+    <div class="tarea" id="tarea3">
+      <h2>Tarea 3: Añadir Elementos</h2>
+      <ul id="lista-dinamica">
+        <li class="item-lista">Elemento 1</li>
+        <li class="item-lista">Elemento 2</li>
+      </ul>
+      <button onclick="agregarElemento()">Añadir Elemento</button>
+    </div>
+
+    <!-- Tarea 4: Eliminar elementos -->
+    <div class="tarea" id="tarea4">
+      <h2>Tarea 4: Eliminar Elementos</h2>
+      <ul id="lista-eliminar">
+        <li class="item-lista">Elemento A</li>
+        <li class="item-lista">Elemento B</li>
+        <li class="item-lista">Elemento C</li>
+      </ul>
+      <button onclick="eliminarElemento()">Eliminar Último Elemento</button>
+    </div>
+  </div>
+
+  <script>
+    // Tarea 1: Modificar Texto
+    function modificarTexto() {
+      const texto = document.getElementById('texto-inicial');
+      texto.textContent = '¡Texto modificado con éxito!';
+    }
+
+    // Tarea 2: Cambiar Estilos
+    function cambiarEstilo() {
+      const caja = document.querySelector('#caja-estilo');
+      caja.style.backgroundColor = 'blue';
+      caja.style.color = 'white';
+      caja.style.padding = '15px';
+      caja.style.border = '2px solid black';
+    }
+
+    // Tarea 3: Añadir Elementos
+    function agregarElemento() {
+      const lista = document.querySelector('#lista-dinamica');
+      const elementosActuales = document.querySelectorAll('#lista-dinamica .item-lista');
+      const nuevoElemento = document.createElement('li');
+      const numero = elementosActuales.length + 1;
+      nuevoElemento.textContent = 'Elemento ' + numero;
+      nuevoElemento.classList.add('item-lista');
+      lista.appendChild(nuevoElemento);
+    }
+
+    // Tarea 4: Eliminar Elementos
+    function eliminarElemento() {
+      const items = document.querySelectorAll('#lista-eliminar li');
+      if (items.length === 0) {
+        alert('No hay más elementos para eliminar');
+      } else {
+        const ultimo = items[items.length - 1];
+        ultimo.remove();
+      }
+    }
+  </script>
+</body>
+</html>

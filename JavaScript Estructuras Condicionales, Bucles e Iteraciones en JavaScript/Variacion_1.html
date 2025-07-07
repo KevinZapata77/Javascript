@@ -1,0 +1,19 @@
+<h3>Variación 1</h3>
+<script>
+let tiempo = 0;
+let limite = 30;
+let costo = 0;
+
+if (tiempo === 0) {
+  console.log("Error: El tiempo no puede ser cero");
+} else {
+  while (tiempo < limite) {
+    tiempo += 5;
+    let tarifa = tiempo <= 15 ? 0.5 : 0.3;
+    let costoParcial = 5 * tarifa;
+    costo += costoParcial;
+    console.log(`Tiempo: ${tiempo} minutos, Costo acumulado: $${costo.toFixed(2)}`);
+  }
+  console.log(`Costo total de la entrega: $${costo.toFixed(2)}`);
+}
+</script>
