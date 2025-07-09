@@ -1,0 +1,101 @@
+/* Fondo general */
+body {
+  background-color: #0a0a0f;
+  color: #e0d7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos */
+h1, h5, .card-title {
+  color: #bb86fc;
+  font-weight: 600;
+}
+
+/* Cards de los relojes */
+.card {
+  background-color: #151122;
+  border: 1px solid #2a213c;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+.card:hover {
+  border-color: #bb86fc;
+}
+
+/* Botones primarios */
+.btn-primary {
+  background-color: #bb86fc;
+  border: none;
+  color: #0a0a0f;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #a070f0;
+}
+
+/* Botones outline */
+.btn-outline-primary {
+  border: 1px solid #bb86fc;
+  color: #bb86fc;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #bb86fc;
+  color: #0a0a0f;
+}
+
+/* Inputs y textareas */
+.form-control {
+  background-color: #1c152a;
+  border: 1px solid #2a213c;
+  color: #e0d7fa;
+  border-radius: 6px;
+}
+
+.form-control::placeholder {
+  color: #b29ddb;
+}
+
+.form-control:focus {
+  border-color: #bb86fc;
+  background-color: #1c152a;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+/* Card-footer */
+.card-footer {
+  background-color: transparent;
+  border-top: 1px solid #2a213c;
+}
+
+/* Alertas */
+.alert-success {
+  background-color: #1c152a;
+  border-color: #4b2e6a;
+  color: #bb86fc;
+}
+
+.alert-danger {
+  background-color: #1c0a1a;
+  border-color: #5a1b35;
+  color: #ff4d88;
+}
+
+/* Formulario Card */
+.card-body {
+  background-color: #151122;
+  border-radius: 10px;
+}
+
+/* Imagen del reloj */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background-color: #0a0a0f;
+  border-bottom: 1px solid #2a213c;
+}
